@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <link rel="shortcut icon"  href="images/favicon.ico">
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+	<title>龙城大学</title>
+	<style type="text/css" media="screen">
+	*{margin:0px;padding:0px;}
+
+	body a,span,p{
+		text-decoration: none;		
+		font-family:"微软雅黑";
+	}
+	ul{
+		list-style:none;
+		margin: 0;
+    	padding: 0;
+	}	
+	#head{
+		background-color:#026707;
+		width:1349px;
+		height:182px; 
+		position:relative;
+	}
+	#center{
+    	width: 936px;
+    	margin: 0 auto;
+	}
+	.top {
+    	height: 12px;
+    	text-align: right;
+    	padding-top: 8px;
+    	float: right;
+    	width: 200px;
+    	margin-right: 2px;
+	}
+	
+	.top p {
+    	line-height: 18px;
+   	 	background: url(http://www.jiangnan.edu.cn/images/top_bg.jpg) no-repeat right 6px;
+    	padding-right: 14px;
+    	width: 50px;
+    	float: right;
+	}
+	.English:link {color:#B5D1D8;font-size: 11px; text-decoration:none;}      /* 未访问链接*/
+	.English:visited {color:#B5D1D8;font-size: 11px;text-decoration:none;}   /*已访问链接 */
+	.English:hover {color:#FF6617;font-size: 11px;text-decoration:none;}  /* 鼠标移动到链接上 */
+	.English:active {color:#FF6617;font-size: 11px;text-decoration:none;}  /* 已访问过的链接，链接被点击的那一刻*/
+	.English{
+		margin-top: 0px;
+	}
+	.logo {
+    	width: 300px;
+    	float:left;
+    	margin-top: 0px;
+	}
+	.logo img {
+    margin: 3px 0px 14px 207px;
+	}
+	.head_list {
+		position:absolute;
+		width:250px;
+		height:46px;
+		margin-top: 54px;
+		margin-left: 915px;
+		float:right;
+	}
+	 ul{
+	    list-style: none;
+
+	}
+	.head_list ul li a {
+    	color: #fff;
+    	font-weight: bold;
+    	font-size: 13px;
+	}
+	.head_list ul li {
+    	width: 50px;
+    	height: 50px;
+    	float: left;
+    	text-align: center;
+    	padding-top: 13px;
+    	background: url(images/index_02.png) no-repeat;
+    	margin-left: 10px;
+	}
+
+	.menu{
+		background-color:#fff;
+		width:1349px;
+		height:33px; 
+	}
+	#nav {
+    	width: 936px;
+    	position: absolute;
+    	margin-left: 210px;
+    	height:32px;
+	}
+
+	
+	/* 容器 <div> - 需要定位下拉内容 */
+	.dropdown {
+		z-index:999999;
+		background-color: #fff;
+		float :left;
+    	text-align: center;
+    	position: relative;
+    	height: 32px;
+    	padding: 0px;
+    	width: 103px;
+	}
+	.dropbtn{
+		font-family:微软雅黑;
+		margin:auto;
+		font-size: 15px;
+    	color: #042B35;
+    	display: block;
+    	height: 26px;
+    	padding-top: 6px;
+	}
+	
+	/* 下拉内容 (默认隐藏) */
+	.dropdown-content {
+		z-index:999999;
+    	display: none;
+    	position: absolute;
+    	background-color: #218C06;
+    	width: 103px;
+    	height:32px;
+    	margin:auto;
+	}
+	/* 下拉菜单的链接 */
+	.dropdown-content a {
+		z-index:999999;
+		font-size:12px;
+    	color: #fff;
+    	text-align: center;
+    	padding: 8px;
+    	text-decoration: none;
+    	background-color:#218C06;
+    	display: block;
+    	border-top: 1px solid #DBDBDB;
+    	
+	}
+	/* 鼠标移上去后修改下拉菜单链接颜色 */
+	.dropdown-content a:hover {font-weight:bold;}
+
+	/* 在鼠标移上去后显示下拉菜单 */
+	.dropdown:hover .dropdown-content {display: block;}
+
+	/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+	.dropdown:hover .dropbtn {
+    	background-color: #218C06;
+    	color:white;
+	}
+	.home hover{
+		background-color:#218C06;
+	}
+	.homelinka:hover{
+		color:#218C06;		
+	}
+	.home {
+    	float: left;
+    	text-align: center;
+    	height: 32px;
+    	background: #fff;
+    	width: 103px;
+	}
+	.homelink{
+		margin:auto;
+		padding-top:6px;
+		padding-right:1px;
+
+	}
+	.homelink a {
+    	background: #fff url(home_bg.png) no-repeat center;
+    	color:#042B35;
+    	text-align: center;
+    	font-weight: bold;
+    	padding-left:14px;
+    	padding-right:14px;
+    	
+    	font-size:15px;
+	}
+	
+	.contain{
+		background-color:#D2D2CD;
+		width:960px;
+		margin:auto;
+		 
+	}
+	#top-main {
+    	position: relative;
+    	overflow: hidden;
+    	height: 640px;
+	}
+	#top-main .left-banner {
+    	width: 960px;
+    	height: 640px;
+    	position:relative;
+	}
+	#top-main .left-banner li {
+    	position: absolute;
+    	left: ;
+    	top: 0;
+    	opacity: ;
+	}
+	#top-main .left-banner li img {
+    	width: 960px;
+    	height: 640px;
+    	position: absolute;
+	}
+	#top-main .left-banner span {
+    	width: 500px;
+    	height: 300px;
+    	display: block;
+    	position: absolute;
+    	top: 150px;
+    	left: 45px;    	
+    	text-align: left;
+   	 	/*padding-top: 116px;
+   	 	float: right;
+    	padding-left: 28px;
+    	padding-right: 140px;
+    	opacity:0.3;
+    	background-color:#AFDBCA;*/
+    	color: #fff;
+    	font-size: 14px;
+    	line-height: 24px;
+    	z-index:90;
+    	
+	}
+	#top-main .controller {
+    	width: 360px;
+    	margin: 0px auto;
+    	text-align: center;
+    	position: absolute;
+   	 	top: 596px;
+    	left: 50%;
+   	 	margin-left: -180px;
+	}
+	#top-main .controller li.current {
+    	background-position: 5px -20px;
+	}
+	#top-main .controller li {
+    	display: inline-block;
+    	width: 18px;
+    	height: 20px;
+    	margin:0px;
+    	padding:0px;
+    	text-align: center;
+    	background: url(images/dot.png) 4px 0 no-repeat;
+    	_background: url(images/dot_8.png) 4px 0 no-repeat;
+    	zoom: 1;
+	}
+	.daziti{
+		font-size:28px;
+		font-weight:normal;
+		font-family:微软雅黑;
+		padding-bottom:20px;
+	}
+	#top-main .controller li:hover {position:relative;top:1px;}
+
+
+
+	.containmsg{
+		width:960px;
+		margin:auto;
+		height:900px;  
+		margin-top:30px;
+	}
+	h3,h4{
+    	list-style: none;
+    	margin: 0;
+    	padding: 0;
+		}
+
+	.block_title h3 a {
+    	color: #042B35;
+    	font-family: Microsoft YaHei;
+    	font-size: 15px;
+	}
+
+	#link_box{
+		height:50px;
+		width:960px;
+		margin:auto;
+		margin:16px 194.5px;
+	}
+	#link_list{
+    	width: 800px;
+    	text-align: center;
+    	margin: 0 auto;
+    	z-index: 99;
+	}
+	#link_box ul li {
+    	display: inline-block;
+    	zoom: 1;
+    	text-align: center;
+    	position: relative;
+    	height: 60px;
+    	padding: 0px;
+    	margin: 0px 11px;
+	}
+	.weix_hide{
+		display:none;
+		position:absolute;
+		width: 280px;
+    	height: 155px;
+    	right:-90px;
+    	bottom:60px;
+    	padding: 0px;
+    	margin-left: 0px;
+
+	}
+	#link_box ul.weix_hide li {
+    	width: 280px;
+    	height: 155px;
+    	padding: 0px;
+    	background: none;
+	}
+	.weixin:hover .weix_hide {display: block;}
+
+	#foot{
+		background-color: #026707;
+		width:100%;
+		height:308px; 
+		padding:20px 0px;
+	}
+	.xy_list {
+    	width: 752px;
+    	margin: 0 auto;
+    	clear: both;
+    	margin-top: 20px;
+	}
+	.xy_list ul {
+    	width: 110px;
+    	float: left;
+    	padding-left: 40px;
+    	margin-bottom: 20px;
+	}
+	.xy_list ul h4 {
+    	font-size: 14px;
+    	font-weight: normal;
+    	margin-bottom: 14px;
+    	margin-top: 10px;
+	}
+	.xy_list ul a {
+    	color: #fff;
+	}
+	.xy_list ul li {
+    	line-height: 22px;
+	}
+	.xy_list ul li a {
+		font-size:12px;
+    	color: #B5D1D8;
+	}
+	.xy_list p {
+		font-family:微软雅黑;
+		font-size:12px;
+    	text-align: center;
+    	color: #fff;
+    	line-height: 22px;
+	}
+	.xy_list p.copy {
+    	color: #B5D1D8;
+	}
+	.xy_list p.copy a {
+    	color: #B5D1D8;
+	}
+	.wrod_zh_block {color:#026707;width:100px;margin-left:25px;}
+	.wrod_zh_block p{margin-top:4px;}
+	</style>
+</head>
+<body>
+
+<div id="head">
+	<div id="center">
+		<div class="top"><p><a class="English" href="https://weibo.com/u/6126633570?is_hot=1" target="_blank" title="English" text-decoration:none;>English</a></p>
+		</div>
+		<div style="clear:both"></div>
+		</div>
+		<div class="logo">
+			<p><img src="images/favicon.jpg" border="0" width="150px" height="150px"/></p>	
+		</div>
+		<div style="position:absolute;left:370px;"><img src="images/longchenguc.png" border="0" /></div>
+		<div class="head_list">
+			<ul>
+				<li><a href=zy/ks/index.shtml>考生</a></li>
+		    	<li><a href=http://e.jiangnan.edu.cn/main/loginIndex.do target="_blank">师生</a></li>
+				<li><a href=zy/xy/index.shtml>校友</a></li>
+		    	<li><a href=http://cso.jiangnan.edu.cn/ target="_blank">合作者</a></li>
+			</ul>
+		</div>
+
+</div>
+
+<div class="menu">
+	<!-- 导航下拉菜单部分 begin -->
+	<ul id="nav">
+    			<li class="dropdown" > <a class="dropbtn" herf="">学校概况</a>
+    				<ul class="dropdown-content">
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">学校简介</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">学校领导</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">历史沿革</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">学校标志</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">校情咨文</a>
+					<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">学校地图</a>
+    				</ul>
+  				</li>
+
+				<li class="dropdown" > <a class="dropbtn" href="xyjg/index.shtml">学校机构</a>
+					<ul class="dropdown-content">
+					<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">管理机构</a>
+					<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">学校导航</a>
+					<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">直属机构</a>
+					</ul>
+				</li>
+
+  				<li class="dropdown" > <a class="dropbtn">招生就业</a>
+    				<ul class="dropdown-content">
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">本科生招生</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">研究生招生</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">留学生招生</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">MBA招生</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">中外合作(北美)</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">网络教育招生</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">成人教育招生</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">非学历教育招生</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">就业信息网</a>
+    				</ul>
+  				</li>
+
+   				<li class="dropdown" > <a class="dropbtn">公共服务</a>
+   					<ul class="dropdown-content">
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">信息公开</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">招标投标</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">校史馆</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">龙大校历</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">校园邮箱</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">3D龙城</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">VPN服务</a>
+    				</ul>
+  				</li>
+
+  				<li class="home" > 
+  					<div class="homelink"><a class="homelinka" href="index.shtml">网站首页</a></div>
+  				</li>
+
+  				<li class="dropdown" > <a class="dropbtn">教育教学</a>
+    				<ul class="dropdown-content">
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">本科教育</a>
+   					<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">研究生教育</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">国际教育</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">本科教学工程</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">经典阅读</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">开放课程</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">至善学院</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">创业教育</a>
+   		 			</ul>
+  				</li>
+
+  				<li class="dropdown" > <a class="dropbtn">科学研究</a>
+    				<ul class="dropdown-content">
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">学科教育</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">国家级科研基地</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">省部级科研基地</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">博士后流动站</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">人文社科研究</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">学术期刊</a>
+    				</ul>
+  				</li>
+
+  				<li class="dropdown" > <a class="dropbtn">合作交流</a>
+    				<ul class="dropdown-content">
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">地方服务与合作</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">国际交流与合作</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">国际教育学院</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">大学科技园</a>
+    				</ul>
+  				</li>
+
+  				<li class="dropdown" > <a class="dropbtn">校园生活</a>
+    				<ul class="dropdown-content">
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">后勤服务</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">龙城生活</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">成长体验</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">讲学助学</a>
+    				<a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank">龙城大学报</a>
+    				</ul>
+  				</li>
+  				<div style="clear:both"></div>
+	</ul>
+ </div>
+
+<div class="contain">
+   <!--焦点图-->
+	<div id="top-main">
+		<div class="mid">
+			<ul class="left-banner">
+				<li >
+				  <div style="position:relative;">
+					<img src="images/zylgg04.jpg" border="0" />		
+					<div style="width:420px;height:180px;background-color:#707070;opacity:0.5;position:absolute;z-index:5;top: 150px;
+    	left: 40px;"></div>			
+					<span>
+					<div style="margin-top:10px;"><h3 style="font-size:30px;color:#000;">恭喜龙城大学</h3></div>
+					<div style="margin-top:30px;">					
+					<h4 style="display:inline-block;font-size:25px;color:#000;">生物科技学院</h4>
+					<h3 class="daziti" style="display:inline-block;margin-left:40px;color:#003A00;font-size:45px;">沈巍教授</h3>
+					</div>
+					<div><h1 style="color:#389C24;font-size:45px;margin-top:20px;">荣获诺贝尔生物学奖<h1></div>					
+    				</span>	
+    					
+    			  </div>			
+				</li>
+									
+				<li style="left:-960px;">
+					<img src="images/bygg02.jpg" border="0" />
+					<div style="width:460px;height:180px;background-color:#707070;opacity:0.5;position:absolute;z-index:5;top: 150px;
+    	left: 40px;"></div>			
+					<span>
+					<div style="margin-top:10px;"><h3 style="font-size:30px;color:#000;">据沈巍教授说</h3></div>
+					<div style="margin-top:30px;">					
+					<h4 style="display:inline-block;font-size:25px;color:#000;">这次研究离不开</h4>
+					<h3 class="daziti" style="display:inline-block;margin-left:40px;color:#003A00;font-size:45px;">赵云澜处长</h3>
+					</div>
+					<div><h1 style="color:#000;font-size:30px;margin-top:20px;">和特别调查处的鼎力相助<h1></div>					
+    				</span>	   
+				</li>
+			  	<li style="left:-960px;">
+					<img src="images/zh00.jpg" border="0" />	
+					<span>					
+					<span>	
+					<h3>
+				  	</h3>
+					<br /> 
+    				</span>	   					
+    			 									
+				</li>
+			  	<li style="left:-960px;">
+					<img src="images/zh02.jpg" border="0" />
+							
+					<span>	
+					<h3>
+				  	</h3>
+					<br /> 
+    				</span>	    							
+				</li>
+				<li style="left:-960px;">
+					<img src="images/zh03.jpg" border="0" />
+							
+					<span>	
+					<h3>
+				  	</h3>
+					<br /> 
+    				</span>	    							
+				</li>
+			</ul>
+
+			<ul class="controller">				
+				<li data-ca="main-slide1" class="current"></li>
+				<li data-ca="main-slide2" ></li>
+				<li data-ca="main-slide3" ></li>
+				<li data-ca="main-slide4" ></li>
+				<li data-ca="main-slide5" ></li>
+			</ul>
+		</div>
+	</div>
+
+<script type="text/javascript" src="js/jiaodianpic.js"></script>
+
+	
+	<!--焦点图 end-->
+</div>
+
+
+
+<div class="containmsg">  
+  <div  style="">
+
+   <div>
+      <span style="font-size:20px;">重要通知</span> 
+      <a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank" style="margin-left:830px;color:#117317;">更多</a>
+      <div style="width:960px;height:3px;background:#117317;margin-top:3px;"></div>      
+   </div>
+   <div> 
+       <div style="margin-top:20px;height:200px;position:relative;"> 
+            <img src="images/03.jpg" border="0" width="300px" height="200px"/>
+            <div style="width:590px;height:200px;display:inline-block;margin-left:20px;position:absolute;left:330px;">
+            <span style="color:#026707;font-size:20px;">我校将于明日上午10点开启本学期校园选课系统<span> 
+            <p style="color:#000;font-size:16px;margin-top:15px;">&nbsp;&nbsp;&nbsp;&nbsp;我校将于明日10点开启校园选课系统，考虑到去年我校服务器由于拥挤而崩溃问题，为保证选课系统正常运行，学生可以选择心仪课程，我校已提前租用阿里巴巴的服务器。</p>
+            <p style="color:#000;font-size:16px;margin-top:px;">&nbsp;&nbsp;&nbsp;&nbsp;关于选课，请同学们量力而行，建议不要一窝蜂选择如生物科技学院生物工程专业沈巍教授的《生物变异发展史》等热门课程，引起校园选课系统崩溃。同时，考虑到同学们对知识的需求，沈巍教授的《生物变异发展史》课程将扩容可选学生总数至1000人，上课教师将转移到校小礼堂。</p>
+            </div> 
+       </div>
+   </div>
+   <div>
+   	<div style="margin-top:20px;height:200px;position:relative;"> 
+   			<div style="width:260px;height:150px;background-color:#F8F8F8;position:absolute;left:10px;top:30px;"> 
+                 <div style="width:254px;height:40px;margin-top:3px;margin-left:3px;background-color:#CCE1CE;padding-top:8px;"> 
+                    <span style="color:#026707;font-size:20px;margin-left:3px;">13年的今天</span>
+                    <p style="color:#026707;font-size:20px;margin-top:20px;">06.24</p>
+                    <p style="color:#000;font-size:20px;margin-top:20px;">镇魂完结已经85天</p>
+                 </div> 
+   			</div>             
+            <div style="width:610px;height:200px;display:inline-block;position:absolute;left:350px;top:0;">
+              <div> 
+              	<span style="font-size:20px;">学校新闻</span> 
+                 <a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank" style="margin-left:480px;color:#117317;">更多</a>
+               <div style="width:610px;height:3px;background:#117317;margin-top:3px;"></div>
+              </div>
+           	  <div style="position:relative;"> 
+           	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
+           	     <span style="color:#117317;">06.24<span> 
+           	     </div>
+           	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
+                  <p>我校今年高考报名人数增长迅猛，其中生物科技学院生物工程专业以134.8%的增长率高居全国榜首</p>
+           	     </div>
+           	  </div>
+           	  <div style="position:relative;top:55px;"> 
+           	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
+           	     <span style="color:#117317;">06.23<span> 
+           	     </div>
+           	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
+                  <p>我校1号楼教学楼旧址今日挖掘出神秘人古墓，墓中发现大量一丝昆仑君神话故事集孤本，这些孤本据考古学家衡量，价值不可估量</p>
+           	     </div>
+           	  </div>
+           	  <div style="position:relative;top:110px;"> 
+           	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
+           	     <span style="color:#117317;">06.22<span> 
+           	     </div>
+           	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
+                  <p>我校已于今日开展"宣扬传统文化、用我的经历来讲述神话故事给你听"的主题宣传活动</p>
+           	     </div>
+           	  </div>
+           
+            </div> 
+       </div> 
+   </div>
+   <div>
+   	<div style="margin-top:20px;height:610px;position:relative;"> 
+   			<div style="width:260px;height:360px;background-color:#F8F8F8;position:absolute;left:10px;top:10px;"> 
+                 <div style="width:254px;height:40px;margin-top:3px;margin-left:3px;background-color:#CCE1CE;padding-top:8px;"> 
+                    <span style="color:#026707;font-size:20px;margin-left:3px;">今日好书美句</span>                   
+                 </div> 
+                 <div style="margin-top:10px;margin-left:60px;"> 
+                    <img src="images/05.jpg" border="0" width="138px" height="192px" style=""/>
+                    <div class="wrod_zh_block" style=""> 
+                        <p>镇生者之魂，<p>
+                        <p>安死者之心，<p>
+                        <p>赎未完之罪，<p>
+                        <p>轮未竞之回。<p>
+                    </div>
+                 </div>
+   			</div>             
+            <div style="width:610px;height:200px;display:inline-block;position:absolute;left:350px;top:0;">
+              <div> 
+              	<span style="font-size:20px;">龙城日报</span> 
+                 <a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank" style="margin-left:480px;color:#117317;">更多</a>
+               <div style="width:610px;height:3px;background:#117317;margin-top:3px;"></div>
+              </div>
+           	  <div style="position:relative;"> 
+           	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
+           	     <span style="color:#117317;">06.24<span> 
+           	     </div>
+           	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
+                  <p>距离《镇魂》下次更新还有三天，镇魂女（男）孩（鬼）们纷纷表示非常绝望，还好主演们历史素材丰富，稳住了他们</p>
+           	     </div>
+           	  </div>
+           	  <div style="position:relative;top:55px;"> 
+           	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
+           	     <span style="color:#117317;">06.23<span> 
+           	     </div>
+           	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
+                  <p>都市悬疑探案据《镇魂》自从6月13号登录龙城卫视黄金档，优酷18:00独家同步放送以来，迅速席卷全球，热度高居不下</p>
+           	     </div>
+           	  </div>
+           	  <div style="position:relative;top:110px;"> 
+           	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:10px;">
+           	     <span style="color:#117317;">06.22<span> 
+           	     </div>
+           	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
+                  <p>龙城近几天频现路人边走边看着傻笑，是莫名灵异事件还是情有可原，所幸没有造成事故，还是提心大家要小心手机不要被玩坏</p>
+           	     </div>
+           	  </div>
+           
+            </div> 
+            <div style="width:610px;height:200px;display:inline-block;position:absolute;left:350px;top:200px;">
+              <div> 
+              	<span style="font-size:20px;">龙城论坛</span> 
+                 <a href="https://v.youku.com/v_show/id_XMzY2MDI5NDM0MA==.html?spm=a2h0k.11417342.soresults.dselectbutton&s=dca053efbfbd36efbfbd" target="_blank" style="margin-left:480px;color:#117317;">更多</a>
+               <div style="width:610px;height:3px;background:#117317;margin-top:3px;"></div>
+              </div>
+           	  <div style="position:relative;"> 
+           	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:5px;">
+           	     <span style="color:#F92700;">HOT<span> 
+           	     </div>
+           	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
+                  <p>惊！龙城大学不得不说的那些诡异校园故事</p>
+           	     </div>
+           	  </div>
+           	  <div style="position:relative;top:40px;"> 
+           	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:5px;">
+           	     <span style="color:#F92700;">HOT<span> 
+           	     </div>
+           	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
+                  <p>帮占座沈巍老师的《生物变异发展史》课程，诚信占座，价格公道，要的私聊，先到先得</p>
+           	     </div>
+           	  </div>
+           	  <div style="position:relative;top:90px;"> 
+           	     <div style="width:60px;height:25px;display:inline-block;position:absolute;top:5px;">
+           	     <span style="color:#F92700;">HOT<span> 
+           	     </div>
+           	     <div style="width:480px;height:50px;display:inline-block;top:3px;position:absolute;left:60px;"> 
+                  <p>咱们的镇校之宝沈老师貌似有了男朋友，有图有真相！</p>
+           	     </div>
+           	  </div>
+           
+            </div> 
+       </div> 
+   </div>	
+	<div style="clear:both"></div>
+    </div>
+</div>
+
+
+<div id="foot">
+	<div class="xy_list">
+			<ul>
+				<h4><a>校园门户</a></h4>
+					<li><a class="chen" href="" target="_blank">新闻网</a></li>
+					<li><a class="chen" href="" target="_blank">图片网</a></li>
+					<li><a class="chen" href="" target="_blank">笃学网</a></li>
+					<li><a class="chen" href="" target="_blank">图书档案</a></li>
+					<li><a class="chen" href="" target="_blank">龙城学子</a></li>
+					<li><a class="chen" href="" target="_blank">龙城青年</a></li>
+			</ul>
+	  		<ul>
+				<h4><a>学院导航</a></h4>
+					<li><a class="chen" href="" target="_blank">食品学院</a></li>
+					<li><a class="chen" href="" target="_blank">生物工程学院</a></li>
+					<li><a class="chen" href="" target="_blank">纺织服装学院</a></li>
+					<li><a class="chen" href="" target="_blank">化学与材料工程学院</a></li>
+					<li><a class="chen" href="" target="_blank">物联网工程学院</a></li>
+					<li><a class="chen" href="" target="_blank">    ......</a></li>
+			</ul>
+	  		<ul>
+				<h4><a>教学科研</a></h4>
+					<li><a class="chen" href="" target="_blank">国家重点实验室</a></li>
+					<li><a class="chen" href="" target="_blank">国家工程实验室</a></li>
+					<li><a class="chen" href="" target="_blank">国培计划专题网</a></li>
+					<li><a class="chen" href="" target="_blank">本科教学工程网</a></li>
+					<li><a class="chen" href=" " target="_blank">荣氏研究中心</a></li>
+			</ul>
+	  		<ul>
+				<h4><a>公共服务</a></h4>
+					<li><a class="chen"  href="" target="_blank">信息公开</a></li>
+					<li><a class="chen" href="" target="_blank">招标投标</a></li>
+					<li><a class="chen" href="" target="_blank">校园邮箱</a></li>
+					<li><a class="chen" href="" target="_blank">3D龙城</a></li>
+			</ul>
+	  		<ul>
+				<h4><a>友情链接</a></h4>
+					<li><a class="chen" href="" target="_blank">教育部</a></li>
+					<li><a class="chen" href="" target="_blank">龙城教育</a></li>
+					<li><a class="chen" href="" target="_blank">龙城教育发布</a></li>
+			</ul>
+	</div>
+
+	<div style="clear:both"></div>
+
+	<div class="xy_list">
+		<p>地址：龙城市光明路4号 &nbsp;&nbsp;  邮编：666666&nbsp;&nbsp;本科招生：0510-6666666&nbsp;&nbsp; 就业指导中心：0510-66666666 666666666</p>
+		<p class="copy">Copyright 2014-2018 University of Dargon City. All rights reserved.</p>
+		<p class="copy"><a class="chen" href="http://www.miibeian.gov.cn/" target="_blank">龙ICP备666666666号</a></p>
+	</div>
+</div>
+
+</body>
+</html>
